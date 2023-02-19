@@ -1,0 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --purple: rgb(78,70,220);
+}

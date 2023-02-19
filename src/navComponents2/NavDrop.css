@@ -1,0 +1,93 @@
+.navdrop_container{
+    max-width: 200px;
+    height: 60px;
+    padding: 10px;
+}
+
+.navdrop_button{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navdrop_button div{
+    text-overflow: ellipsis;
+    margin-right: 5px;
+    position: relative;
+    color: rgb(41, 40, 40);
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+.downArrow{
+    transform: rotate(0deg);
+    transition: transform, 0.1s ease;
+}
+.navdrop_container:hover .downArrow{
+    transform: rotate(-180deg);
+}
+
+.navdrop_options{
+    position: absolute;
+    margin-top: 10px;
+    background-color: white;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 2px 7px 1px rgb(158, 157, 157);
+    border-radius: 5px;
+    width: 200px;
+    transform:translateY(-9px);
+    transition: all 0.1s ease;
+}
+.navdrop_container:hover .navdrop_options{
+    visibility: visible;
+    opacity: 1;
+    transform:translateY(0px);
+}
+
+.navdrop_options a{
+    border-radius: 0px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(85, 85, 85);
+    letter-spacing: 0.5px;
+    padding: 10px 10px;
+}
+.navdrop_options a:nth-child(1){
+    border-radius: 5px;
+}
+.navdrop_options a:nth-last-child(1){
+    border-radius: 5px;
+}
+.navdrop_options a:hover{
+    background-color: rgb(214, 215, 216);
+}
+.active:hover{
+    background-color: rgb(2, 3, 3) !important;
+}
+
+@media screen and (max-width: 675px){
+    
+    .navdrop_container{
+        padding: 0px;
+        height: fit-content;
+    }
+    .navdrop_options{
+        left: 100%;
+        
+        transform: translateY(-59px);
+    }
+    .navdrop_container:hover .navdrop_options{
+        visibility: visible;
+        opacity: 1;
+        transform:translateY(-50px);
+    }
+ }
