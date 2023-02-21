@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Dashboard.css"
 import "../components/Modal.css"
 import Modal1 from '../components/Modal1'
 import Modal2 from '../components/Modal2'
@@ -34,19 +33,19 @@ function Dashboard() {
     }
 
     return (
-        <div className = "dashboard">
+        <div className = " mt-40">
             
             <Modal1 />
             <Modal2 />
-            <div className = "components_1">
+            <div className = "flex gap-5 flex-wrap mb-5 px-5">
                 <div >
-                    <button onClick = {openModal1} className = "dashboard_btn_2">Open modal 1</button>
-                    <button onClick = {openModal2} className = "dashboard_btn_2">Open modal 2</button>
-                    <button onClick = {open404Page1} className = "dashboard_btn_2">404 Page 1</button>
+                    <button onClick = {openModal1} className = " dashboard-btn ">Open modal 1</button>
+                    <button onClick = {openModal2} className = "dashboard-btn">Open modal 2</button>
+                    <button onClick = {open404Page1} className = "dashboard-btn">404 Page 1</button>
                     <Dropdown options = {options} id = "dropdown_options" />
                     
                 </div>
-                <div className = "components_1_radio">
+                <div className = 'flex gap-2.5 flex-wrap'>
                     <Radio1 p = {p} h1 = {h} options = {options} id = "radio_options1" />
                     
                     <Radio2 p = {p} h1 = {h} options = {options2} id = "radio_options3" />
