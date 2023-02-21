@@ -1,5 +1,5 @@
 import React from 'react'
-import "../components/Modal.css"
+
 import Modal1 from '../components/Modal1'
 import Modal2 from '../components/Modal2'
 import Dropdown from '../components/Dropdown'
@@ -19,12 +19,12 @@ function Dashboard() {
 
     const openModal1 = () => {
         const modal1 = document.getElementById("modal1_container");
-        modal1.classList.add("open_modal");
+        modal1.classList.replace("hidden", "flex");
         document.querySelector("body").style.overflow = 'hidden';
     }
     const openModal2 = () => {
         const modal2 = document.getElementById("modal2_container");
-        modal2.classList.add("open_modal")
+        modal2.classList.replace("hidden", "flex");
         document.querySelector("body").style.overflow = 'hidden';
     }
     

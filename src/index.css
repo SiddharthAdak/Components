@@ -9,4 +9,7 @@
     .acitve{
         @apply text-white bg-gray-900
     }
+    .ham_bar{
+        @apply w-full h-[3px] bg-white rounded-[5px] my-[2px]
+    }
 }

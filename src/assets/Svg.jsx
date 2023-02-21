@@ -19,7 +19,7 @@ export const BellIcon =()=>{
 
 export const TickIcon = () => {
     return (
-        <svg fill="#4ba155" height="70px" width="70px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.936 511.936" xmlSpace="preserve" stroke="#4ba155" strokeWidth="30"><g id="SVGRepo_bgCarrier" strokeWidth="10"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#4ba155" strokeWidth="15"></g><g id="SVGRepo_iconCarrier"> <g> <g> <polygon points="500.288,61.904 155.888,427.344 11.024,289.376 0,300.96 156.512,450.032 511.936,72.88 "></polygon> </g> </g> </g></svg>
+        <svg className = "px-2.5 py-2.5 rounded-full bg-green-100" fill="#4ba155" height="70px" width="70px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.936 511.936" xmlSpace="preserve" stroke="#4ba155" strokeWidth="30"><g id="SVGRepo_bgCarrier" strokeWidth="10"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#4ba155" strokeWidth="15"></g><g id="SVGRepo_iconCarrier"> <g> <g> <polygon points="500.288,61.904 155.888,427.344 11.024,289.376 0,300.96 156.512,450.032 511.936,72.88 "></polygon> </g> </g> </g></svg>
     )
 }
 
