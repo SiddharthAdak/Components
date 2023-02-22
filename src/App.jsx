@@ -1,4 +1,3 @@
-import './App.css'
 import Navbar from "./navComponents/Navbar"
 import Dashboard from './pages/Dashboard'
 import { Routes, Route } from 'react-router-dom'
@@ -9,7 +8,7 @@ import Mehdi from './pages/Mehdi';
 function App() {
 
   return (
-    <div className="App">
+    <div className="mt-40">
       <Navbar />
       <Navbar2 />
       <div className='mt-40'>

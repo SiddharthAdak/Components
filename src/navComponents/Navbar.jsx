@@ -19,7 +19,11 @@ function Navbar() {
 
                 <ul className = "flex md:hidden" >
                     {navlist.map((element)=>{
-                        return <li className = "mx-2.5 my-2.5" key = {element}><NavLink className = "rounded-[5px] text-gray-400 px-5 py-2 text-base" to = {element=="Dashboard"?"/":element}>{element}</NavLink></li>
+                        return <li className = "mx-2.5 my-2.5" key = {element}><NavLink 
+                        className={({ isActive }) =>
+                            isActive ? 'rounded-[5px] active px-5 py-2 text-base' : 'rounded-[5px] text-gray-400 px-5 py-2 text-base'
+                        }
+                         to = {element=="Dashboard"?"/":element}>{element}</NavLink></li>
                     })}
                 </ul>
             
@@ -35,9 +39,15 @@ function Navbar() {
                 <img className = "w-[30px] h-[30px] rounded-full" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzAqKERFeE4h-K3vnOWQSWJmxRTKTApVjEg&usqp=CAU" />
             </div>
         </nav>
+
         <div id = "ham_menu" className = {state?"fixed hidden z-[9] opacity-100 flex-col top-16 w-[300px] rounded-md left-1 bg-gray-800 md:flex":"hidden"}>
                     {navlist.map((element)=>{
-                        return <NavLink className = "rounded-[5px] text-gray-400 px-2.5 py-4 text-base" key = {element} to = {element=="Dashboard"?"/":element}>{element}</NavLink>
+                        return <NavLink className = "rounded-[5px] text-gray-400 px-2.5 py-4 text-base"
+                        className={({ isActive }) =>
+                            isActive ? 'rounded-[5px] text-gray-400 px-2.5 py-4 text-base active' : 'rounded-[5px] text-gray-400 px-2.5 py-4 text-base'
+                        }
+                        
+                         key = {element} to = {element=="Dashboard"?"/":element}>{element}</NavLink>
                     })}
             </div>
         </>
