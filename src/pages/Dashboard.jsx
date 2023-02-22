@@ -33,7 +33,7 @@ function Dashboard() {
     }
 
     return (
-        <div className = " mt-40">
+        <div className = "">
             
             <Modal1 />
             <Modal2 />
