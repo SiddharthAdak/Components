@@ -9,7 +9,7 @@ function Radio1({options, id, h1, p}) {
             <div className = "flex items-center gap-y-2 gap-x-5 flex-wrap">
             {options.map((element) => {
                 return(
-                    <div className = "radio_button">
+                    <div key = {element} className = "radio_button">
                     <label className = " text-base gap-2 cursor-pointer flex items-center" htmlFor = {element+id}>
                     <input className = " accent-purple border-0 w-5 h-5" id = {element+id} type="radio" name = {id} />
                     <span>{element}</span>

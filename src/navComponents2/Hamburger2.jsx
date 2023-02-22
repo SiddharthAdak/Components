@@ -1,23 +1,15 @@
 import React from 'react';
-import "./Navbar2.css";
-import { useState } from 'react';
-function Hamburger() {
-    const [state, setState] = useState(false);
-    function handleClick(){
-        setState(!state);
-        let ham = document.getElementById("ham2");
-        ham.classList.toggle("open_ham");
-        let menu = document.getElementById("ham_menu2");
-        menu.classList.toggle("open_menu");
-    }
+
+function Hamburger2({state, handleClick}) {
+    
     return (
-        <div className = "ham2" id = "ham2" onClick = {handleClick}>
+        <div className = "hidden md2:flex flex-col w-[22px] mr-5" id = "ham" onClick = {handleClick}>
         
-            <span className = "ham_bar2"></span>
-            <span className = "ham_bar2"></span>
-            <span className = "ham_bar2"></span>
+            <span className = {state?" bg-slate-600 ham_bar translate-y-[235%] rotate-[45deg]":"bg-slate-600 ham_bar"}></span>
+            <span className = {state?"bg-slate-600 ham_bar opacity-0":"bg-slate-600 ham_bar"}></span>
+            <span className = {state?"bg-slate-600 ham_bar translate-y-[-235%] rotate-[-45deg]":"bg-slate-600 ham_bar"}></span>
         </div>
     )
 }
 
-export default Hamburger
+export default Hamburger2

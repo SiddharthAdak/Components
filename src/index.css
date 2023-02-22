@@ -6,10 +6,25 @@
     .dashboard-btn{
         @apply w-52 cursor-pointer py-2.5 px-1 bg-purple mx-1 my-1 text-white rounded-[5px];
     }
-    .acitve{
-        @apply text-white bg-gray-900
+    .active{
+        @apply !text-white !bg-gray-900
     }
     .ham_bar{
         @apply w-full h-[3px] bg-white rounded-[5px] my-[2px]
+    }
+    .stats h2{
+        @apply text-white text-2xl font-normal
+    }
+    .stats p{
+        @apply text-gray-300 text-xs font-normal
+    }
+    .stats div{
+        @apply bg-gray-800 text-center w-[300px] px-10 py-6
+    }
+    .navlink{
+        @apply rounded-md text-gray-600 py-1 px-5
+    }
+    .navdrop-navlink{
+        @apply block text-gray-600 cursor-pointer hover:bg-gray-200 p-2.5 
     }
 }

@@ -1,4 +1,3 @@
-import './App.css'
 import Navbar from "./navComponents/Navbar"
 import Dashboard from './pages/Dashboard'
 import { Routes, Route } from 'react-router-dom'
@@ -8,7 +7,7 @@ import Navbar2 from './navComponents2/Navbar2';
 function App() {
 
   return (
-    <div className="App">
+    <div className="mt-40">
       <Navbar />
       <Navbar2 />
       <Routes>

@@ -10,7 +10,7 @@ function Radio2({options, id, h1, p}) {
             {options.map((element) => {
                 return(
                     
-                    <div className = "radio2_button">
+                    <div key = {element}>
                     
                     <label className = "cursor-pointer py-2.5 flex items-center justify-between" htmlFor = {element+id}>
                     <span>{element}</span>
