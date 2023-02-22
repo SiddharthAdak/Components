@@ -25,36 +25,6 @@ function Adminusers() {
 
       </div>
 
-      {/* <div>
-        <div className='flex justify-between font-medium  border-gray-200 py-4'>
-          <div className='Name flex  text-center font-semibold '>
-            Name
-          </div>
-          <div className='Title font-semibold'>
-            Title
-          </div>
-          <div className='Email font-semibold'>
-            Email
-          </div>
-          <div className='Role font-semibold '>
-            Role
-          </div>
-          <div className=''>
-
-          </div>
-          
-        </div>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsaymaisdj Walton"} title={"adasdasdasddeveloper"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-        <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-      </div> */}
-
 
       {/* BELOW IS GRID WALA */}
       <div className='grid grid-cols-5 auto-cols-max pb-5 border-b-[1px] border-gray-300 '>
@@ -79,25 +49,6 @@ function Adminusers() {
       <Eachuser name={"Sidharth Adrak"} title={"Backend developer"} email={"ginger@gmail.com"} role={"Admin"} edit={true}/>
       <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={false}/>
       <Eachuser name={"Lindsay Walton"} title={"Frontend developer"} email={"lindsay@gmail.com"} role={"Admin"} edit={true}/>
-
-
-      {/* <div className=" table-auto">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th></th>
-          </tr>
-          <tbody>
-            
-
-          </tbody>
-        </thead>
-
-
-      </div> */}
 
 
 

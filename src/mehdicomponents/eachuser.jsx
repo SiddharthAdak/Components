@@ -28,24 +28,7 @@ function Eachuser(props) {
             <div className={`Edit ${props.edit?"text-indigo-600":"text-gray-500"} font-semibold justify-self-end`}>
                 Edit
             </div>
-                
-            
         </div>
-
-        // TABLE WALA BELOW
-        // <div>
-        //     <tr>
-        //         <td>{props.name}</td>
-        //         <td>{props.title}</td>
-        //         <td>{props.email}</td>
-        //         <td>{props.role}</td>
-        //         <td>Edit</td>
-        //     </tr>
-        // </div>
-
-
-
-
     )
 }
 
