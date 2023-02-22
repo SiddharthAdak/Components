@@ -34,7 +34,10 @@ function Navbar() {
         
             <div className = "flex items-center justify-end">
                 <Link className = "navlink ">Sign in</Link>
-                <Link className = "text-white py-1 px-5 rounded-md bg-purple">Sign up</Link>
+                {/* SIDHARTH WALA IS BELOW */}
+                {/* <Link className = "text-white py-1 px-5 rounded-md bg-purple">Sign up</Link> */}
+                {/* MEHDI CHANGED THIS BELOW */}
+                <button className="dashboard-btn w-20 h-10 flex justify-center items-center ">Sign up</button>
             </div>
         </nav>
 

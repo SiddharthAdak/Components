@@ -4,7 +4,7 @@
 
 @layer components{
     .dashboard-btn{
-        @apply w-52 cursor-pointer py-2.5 px-1 bg-purple mx-1 my-1 text-white rounded-[5px];
+        @apply w-52 cursor-pointer py-2.5 px-1 bg-purple mx-1 my-1 text-white rounded-[5px] hover:bg-violet-700 active:bg-violet-500;
     }
     .active{
         @apply !text-white !bg-gray-900
