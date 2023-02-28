@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-
+import { subMenuAnimate } from '../assets/Svg';
+import { motion } from 'framer-motion';
 import { DownArrow } from '../assets/Svg';
 function Dropdown({options, id}) {
     const [option, setOption] = useState("Select Option");
+    const [state, setState] = useState(false);
     
     const toggleDropdown = () => {
-        const dropdownOptions = document.getElementById(id);
-        dropdownOptions.classList.toggle("hidden");
+        setState(!state);
         const downArrow = document.getElementById(`${id}downArrow`);
         downArrow.classList.toggle("rotate-[180deg]");
     }
@@ -23,11 +24,16 @@ function Dropdown({options, id}) {
                 <div className = "text-ellipsis relative text-gray-800 whitespace-nowrap overflow-hidden">{option}</div>
                 <DownArrow id = {id+"downArrow"} />
             </div>
-            <div id = {id} className = " absolute mt-2.5 bg-white z-[2] box shadow-[0px_1px_5px_1px_rgba(158,157,157)] rounded-md w-[200px] hidden block">
+            <motion.div 
+            id = {id} 
+            initial="exit"
+            animate={state ? "enter" : "exit"}
+            variants={subMenuAnimate}
+            className = " absolute mt-2.5 bg-white z-[2] box shadow-[0px_1px_5px_1px_rgba(158,157,157)] rounded-md w-[200px]">
             {options.map((element)=>{
                         return <p className = "text-base cursor-pointer text-gray-800 p-2.5 hover:bg-gray-200" onClick = {selectOption} key = {element}>{element}</p>
                     })}
-            </div>
+            </motion.div>
             
         </div>
     )

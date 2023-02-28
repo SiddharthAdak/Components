@@ -4,13 +4,13 @@
 
 @layer components{
     .dashboard-btn{
-        @apply w-52 cursor-pointer py-2.5 px-1 bg-purple mx-1 my-1 text-white rounded-[5px] hover:bg-violet-700 active:bg-violet-500;
+        @apply w-52 cursor-pointer py-2.5 px-1 bg-purple mx-1 my-1 text-white rounded-[5px]  hover:bg-indigo-700 transition-colors;
     }
     .active{
         @apply !text-white !bg-gray-900
     }
     .ham_bar{
-        @apply w-full h-[3px] bg-white rounded-[5px] my-[2px]
+        @apply w-full h-[3px] bg-white rounded-[5px] my-[2px] transition-all
     }
     .stats h2{
         @apply text-white text-2xl font-normal
@@ -21,10 +21,11 @@
     .stats div{
         @apply bg-gray-800 text-center w-[300px] px-10 py-6
     }
+    
     .navlink{
         @apply rounded-md text-gray-600 py-1 px-5
     }
     .navdrop-navlink{
-        @apply block text-gray-600 cursor-pointer hover:bg-gray-200 p-2.5 
+        @apply block text-gray-600 cursor-pointer hover:bg-gray-200 p-2.5
     }
 }

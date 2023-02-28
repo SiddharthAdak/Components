@@ -6,9 +6,11 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'md': {max: '930px'},
+      
+      'ms': {min: '930px'},
       'sm': {max: '500px'},
-      'md2': {max: '730px'}
+      'md2': {max: '730px'},
+      'ms2': {min: '730px'}
     },
     fontFamily: {
       'display': ['Poppins', 'sans-serif']

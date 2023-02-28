@@ -1,8 +1,10 @@
 import React from 'react'
 import Hamburger from './Hamburger';
 import { useState } from 'react';
+import { subMenuAnimate } from '../assets/Svg';
 import {NavLink} from "react-router-dom"
 import {Tailwind, SearchIcon, BellIcon} from "../assets/Svg"
+import { motion } from 'framer-motion';
 function Navbar() {
     const navlist = ["Dashboard", "Team", "Projects", "Calendar"]
     const [state, setState] = useState(false);
@@ -17,7 +19,7 @@ function Navbar() {
             <Hamburger handleClick = {handleClick} state = {state} />
                 <Tailwind />
 
-                <ul className = "flex md:hidden" >
+                <ul className = "ms:flex hidden" >
                     {navlist.map((element)=>{
                         return <li className = "mx-2.5 my-2.5" key = {element}><NavLink 
                         className={({ isActive }) =>
@@ -40,16 +42,20 @@ function Navbar() {
             </div>
         </nav>
 
-        <div id = "ham_menu" className = {state?"fixed hidden z-[9] opacity-100 flex-col top-16 w-[300px] rounded-md left-1 bg-gray-800 md:flex":"hidden"}>
-                    {navlist.map((element)=>{
-                        return <NavLink className = "rounded-[5px] text-gray-400 px-2.5 py-4 text-base"
-                        className={({ isActive }) =>
-                            isActive ? 'rounded-[5px] text-gray-400 px-2.5 py-4 text-base active' : 'rounded-[5px] text-gray-400 px-2.5 py-4 text-base'
-                        }
-                        
-                         key = {element} to = {element=="Dashboard"?"/":element}>{element}</NavLink>
-                    })}
-            </div>
+            <motion.div 
+                id = "ham_menu" 
+                initial="exit"
+                animate={state ? "enter" : "exit"}
+                variants={subMenuAnimate}
+                className = {"fixed ms:!hidden z-[9] opacity-100 flex-col top-16 w-[300px] rounded-md left-1 bg-gray-800"}>
+                {navlist.map((element)=>{
+                    return (
+                        <NavLink 
+                            className={({ isActive }) => isActive ? 'navlink active !py-4 block text-gray-400 ' : 'navlink !py-4 block text-gray-400'}
+                            key = {element} to = {element=="Dashboard"?"/":element}>{element}
+                        </NavLink>)
+                })}
+            </motion.div>
         </>
     )
 }

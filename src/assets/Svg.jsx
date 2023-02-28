@@ -25,6 +25,28 @@ export const TickIcon = () => {
 
 export const DownArrow = ({id}) => {
     return(
-        <svg className = {id ? "rotate-0" : "group-hover:rotate-180"} id = {id} width = "15px" height = "15px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#808080"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#808080"></path></g></svg>
+        <svg className = {id ? "rotate-0 transition-transform" : "group-hover:rotate-180 transition-transform"} id = {id} width = "15px" height = "15px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#808080"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#808080"></path></g></svg>
     )
 }
+
+export const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      translateY: "0px",
+      transition: {
+        duration: 0.15
+      },
+      display: "block"
+    },
+    exit: {
+      opacity: 0,
+      translateY: "-5px",
+      transition: {
+        duration: 0.15,
+        
+      },
+      transitionEnd: {
+        display: "none"
+      }
+    }
+  };
